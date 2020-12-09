@@ -1,0 +1,88 @@
+﻿.showWhenSmall {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+     display: none; /*<- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+td {
+    padding: 10px;
+    margin: 0px;
+    width: 7%;
+}
+
+.editable-cell {
+    transition: 0.3s all linear;
+}
+
+.editable-field {
+    display: block;
+    justify-content: inherit;
+}
+
+.editable-input {
+    border: none;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    transition: 0.3s all linear;
+    width: 100%;
+    text-align: center;
+}
+
+    .editable-input:focus {
+        outline: none;
+        background: white;
+        color: #545454;
+    }
+
+@media only screen and (max-width: 480px) {
+    .showWhenLargeAndMedium {
+        display: none;
+    }
+
+    .showWhenSmall {
+        display: inherit;
+    }
+
+/*    #gameTable {
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+
+        #gameTable tr {
+            height: 4em;
+            border-bottom: 1px solid;
+        }
+
+        #gameTable th {
+            border: 1px solid;
+            text-align: left;
+            padding: .07em .2em;
+            white-space: nowrap;
+            font-weight: 400;
+            height: 4em;
+        }
+
+        #gameTable td {
+            padding: .07em .2em;
+            white-space: nowrap;
+            height: 1.4em;
+            display: inline;
+        }
+
+            #gameTable td:not(:last-child)::after {
+                display: block;
+                content: '';
+                height: 0;
+                border-bottom: 1px solid;
+            }*/
+}
